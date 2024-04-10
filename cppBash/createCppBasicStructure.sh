@@ -11,5 +11,5 @@ touch "$current_dir/include/header.hpp" "$current_dir/include/functions.hpp" "$c
 
 # Create Makefile
 cp ~/bashScripts/cppBash/files/Makefile "$current_dir/Makefile"
-cp ~/bashScripts/cppBash/files/header.hpp "$current_dir/Makefile"
-cp ~/bashScripts/cppBash/files/functions.hpp "$current_dir/Makefile"
+cp ~/bashScripts/cppBash/files/header.hpp "$current_dir/include/header.hpp"
+cp ~/bashScripts/cppBash/files/functions.hpp "$current_dir/include/functions.hpp"
