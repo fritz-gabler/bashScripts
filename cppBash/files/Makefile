@@ -29,7 +29,6 @@ all:    $(NAME)
 
 $(NAME):    $(LIBS_NAME) $(OBJ)
   @echo	$(YELLOW)Compiling [$(NAME)]...$(RESET)
-  @printf $(UP)$(CUT)
   @$(CXX)	$(OBJ) -o $(NAME)
   @echo	$(GREEN)Success [$(NAME)] is compiled$(RESET)
 
