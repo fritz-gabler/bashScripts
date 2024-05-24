@@ -4,7 +4,7 @@
 current_dir=$(pwd)
 
 # Create directories
-mkdir -p "$current_dir/src" "$current_dir/include" "$current_dir/include/objects" "$current_dir/src/objectFunctions"
+mkdir -p "$current_dir/src" "$current_dir/include" "$current_dir/include/objects" "$current_dir/src/object_functions"
 
 # Create files
 touch "$current_dir/include/header.hpp" "$current_dir/include/functions.hpp" "$current_dir/src/main.cpp"
