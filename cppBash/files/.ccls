@@ -8,4 +8,5 @@ c++
 -I/Library/Developer/CommandLineTools/usr/include/c++/v1
 -I./include
 -I./include/objects
+-I./include/templates
 
