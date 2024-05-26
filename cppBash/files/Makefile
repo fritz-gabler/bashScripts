@@ -29,35 +29,35 @@ OBJ          :=      $(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 all:    $(NAME)
 
 $(NAME):    $(LIBS_NAME) $(OBJ)
-  @echo	$(YELLOW)Compiling [$(NAME)]...$(RESET)
-  @$(CXX)	$(OBJ) -o $(NAME)
-  @echo	$(GREEN)Success [$(NAME)] is compiled$(RESET)
+	@echo	$(YELLOW)Compiling [$(NAME)]...$(RESET)
+	@$(CXX)	$(OBJ) -o $(NAME)
+	@echo	$(GREEN)Success [$(NAME)] is compiled$(RESET)
 
 $(OBJ_DIR)/%.o: %.cpp
-  @echo $(YELLOW)Compiling [$@]...$(RESET)
-  @printf $(UP)$(CUT)
-  @if	[ ! -d "{OBJ_DIR}" ]; then                       \
-  	mkdir -p _obj;                                     \
-  fi
-  @$(CXX) $(CXXFLAGS) -c $< $(HEADERS) -o $@
+	@echo $(YELLOW)Compiling [$@]...$(RESET)
+	@printf $(UP)$(CUT)
+	@if	[ ! -d "{OBJ_DIR}" ]; then                       \
+		mkdir -p _obj;                                     \
+	fi
+	@$(CXX) $(CXXFLAGS) -c $< $(HEADERS) -o $@
 
 ###############################################################################
 ###############################################################################
 clean:
-  @if [ -d "${OBJ_DIR}" ]; then                        \
-    echo $(RED)Cleaning"  "[$(OBJ_DIR)]...$(RESET);    \
-    rm -rf ${OBJ_DIR};                                 \
-    echo $(GREEN)Cleaned!$(RESET);                     \
-  fi
+	@if [ -d "${OBJ_DIR}" ]; then                        \
+		echo $(RED)Cleaning"  "[$(OBJ_DIR)]...$(RESET);    \
+		rm -rf ${OBJ_DIR};                                 \
+		echo $(GREEN)Cleaned!$(RESET);                     \
+	fi
 
 fclean:    clean
-  @echo $(RED)Cleaning executables...
-  @printf $(UP)$(CUT)
-  @if [ -f "$(NAME)" ]; then                           \
-    echo $(RED)Cleaning"  "[$(NAME)]...$(RESET);       \
-    rm -f $(NAME);                                     \
-    echo $(GREEN)Cleaned!$(RESET);                     \
-  fi
+	@echo $(RED)Cleaning executables...
+	@printf $(UP)$(CUT)
+	@if [ -f "$(NAME)" ]; then                           \
+		echo $(RED)Cleaning"  "[$(NAME)]...$(RESET);       \
+		rm -f $(NAME);                                     \
+		echo $(GREEN)Cleaned!$(RESET);                     \
+	fi
 
 re: fclean all
 
