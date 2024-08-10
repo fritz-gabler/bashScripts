@@ -8,8 +8,8 @@ scriptPath="$HOME/bashScripts/basic_nvim_setup"
 find . -iname "*.hpp" > "$scriptPath/pathCreation/textFiles/hppPath.txt"
 
 # Call program to clean Paths
-cd "$scriptPath"
-"$scriptPath/pathCreation/pathManipulation/cleanPath"
+cd "$scriptPath/pathCreation/pathManipulation"
+./cleanPath
 cd - > /dev/null 2>&1
 
 # Check if cleanCclsPath.txt was created
