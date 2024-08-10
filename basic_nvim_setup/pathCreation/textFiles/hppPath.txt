@@ -1,0 +1,9 @@
+./include/networking/Client.hpp
+./include/networking/PollManager.hpp
+./include/networking/PollManagerExceptions.hpp
+./include/networking/Server.hpp
+./include/networking/Socket.hpp
+./include/networking/SocketExceptions.hpp
+./include/request/Parser.hpp
+./tester/TestCase.hpp
+./tester/TestRequest.hpp
