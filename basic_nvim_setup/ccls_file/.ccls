@@ -1,5 +1,6 @@
 c++
 -Wall -Werror -Wextra
+-std=c++17
 -lreadline
 -lcriterion
 -I/Users/fritzgabler/.brew/Cellar/readline/8.2.7/include/readline
